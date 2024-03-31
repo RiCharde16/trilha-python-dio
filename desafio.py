@@ -13,20 +13,20 @@ extrato = ""
 numero_saques = 0
 LIMITE_SAQUES = 3
 
-DEPOSITO_TXT = """ 
+deposito_txt = """ 
 --------------------------------------------
     Deposito realizado na conta no valor de:
         R$ {:.2f}
 --------------------------------------------
 """
 
-SAQUE_TXT =  """ 
+saque_txt =  """ 
 -------------------------------------------
     Saque realizado na conta no valor de:
         R$ {:.2f}
 -------------------------------------------
 """
-SALDO_ATUAL_CONTA_TXT = """ 
+saldo_atual_conta_txt = """ 
 ------------------------------------------
     Saldo atual da conta: R$ {:.2f}
 ------------------------------------------
@@ -52,7 +52,7 @@ while True:
             saldo += valor_deposito
 
             print(f"Depósitado R$ {valor_deposito:.2f} na conta")
-            extrato += DEPOSITO_TXT.format(valor_deposito)
+            extrato += deposito_txt.format(valor_deposito)
     
     elif opcao == "2":
         print("Saque".center(80,"-"))
@@ -76,7 +76,7 @@ while True:
                 numero_saques += 1
 
                 print(f"Sacado R$ {valor_saque:.2f} na conta")
-                extrato += SAQUE_TXT.format(valor_saque)
+                extrato += saque_txt.format(valor_saque)
 
         else:
             print("Não e possivel realizar mais saques hoje volte amanha".center(80))
@@ -85,7 +85,7 @@ while True:
         print("Extrato".center(80,"-"),end=" ")
 
         print("\n\nNão foram realizadas movimentações na conta".center(80) if not extrato else extrato)
-        print(SALDO_ATUAL_CONTA_TXT.format(saldo))
+        print(saldo_atual_conta_txt.format(saldo))
     
     elif opcao == "0":
         break
