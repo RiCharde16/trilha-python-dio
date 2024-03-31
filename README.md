@@ -38,4 +38,4 @@ operações: depósito, saque e extrato.
 ## 🔗 Referências
  - [Respositorio Trilha Python DIO](https://github.com/digitalinnovationone/trilha-python-dio)
 
- - [Desafio finalizado](hstttps://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py)
+ - [Desafio finalizado](htttps://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py)
