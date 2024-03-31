@@ -35,7 +35,7 @@ operações: depósito, saque e extrato.
     saldo atual da conta.
     Os valores devem ser exibidos utilizando o formato R$ xxx.xx, exemplo: 1500.45 = R$ 1500.45
 
-## 🔗 Reférencias
+## 🔗 Referências
  - [Respositorio Trilha Python DIO](https://github.com/digitalinnovationone/trilha-python-dio)
 
- - [Desafio finalizado](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py)
+ - [Desafio finalizado](hstttps://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py)
