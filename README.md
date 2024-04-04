@@ -3,7 +3,7 @@
 Desafio da criação de um programa para um Sistema Bancário desenvolvido em Python por Linha de Comando (CMD) para
 o Bootcamp de **Python AI Backend Developer** da [Digtal Innovation One](https://www.dio.me/) (DIO).
 
-### Desafio
+## Desafio
 
 Fomos contratados por um grande banco para desenvolver o
 seu novo sistema. Esse banco deseja modernizar suas
