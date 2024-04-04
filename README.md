@@ -3,7 +3,7 @@
 Desafio da criação de um programa para um Sistema Bancário desenvolvido em Python por Linha de Comando (CMD) para
 o Bootcamp de **Python AI Backend Developer** da [Digtal Innovation One](https://www.dio.me/) (DIO).
 
-## Desafio
+## Desafio 1
 
 Fomos contratados por um grande banco para desenvolver o
 seu novo sistema. Esse banco deseja modernizar suas
@@ -72,4 +72,5 @@ cada conta também possui seu próprio saldo, e seu proprio extrato.
 ## 🔗 Referências
  - [Respositorio Trilha Python DIO](https://github.com/digitalinnovationone/trilha-python-dio)
 
- - [Desafio finalizado](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py)
+ - [Desafio 1 finalizado na Trilha Python](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py)
+- [Desafio 2 finalizado na Trilha Python](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/desafio.py)
