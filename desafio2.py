@@ -38,38 +38,41 @@ def extrato(saldo,/,*,extrato):
 """.format(saldo))
 
 def cadastrar_usuario(lista_usuarios):
-    nome = input("Digite seu nome: ")
-    data_nascimento = input("Digite a sua data de nascimento EX: XX/XX/XXXX: ")
-    lista_data = data_nascimento.split("/")
-    if len(lista_data) == 3:
-        verificar_dia = (len(lista_data[0]) > 2 and not lista_data[0].isnumeric())
-        verificar_mes = (len(lista_data[1]) > 2 and not lista_data[1].isnumeric())
-        verificar_ano = (len(lista_data[2]) > 4 and not lista_data[2].isnumeric())
-        if verificar_dia and verificar_mes and verificar_ano:
-            print("os valores da Data estão incorreto")
-            return 
-    else:    
-        print("Data de nascimento invalida")
-        return 
+    
 
     cpf = input("Digite seu cpf apenas numeros: ")
 
     if not cpf.isnumeric() or (len(cpf) > 11 or len(cpf) < 11):
         print("CPF Invalido".center(80))
         return
-    
-    for usuario in usuarios_cadastrados:
-        if (usuario['cpf'] == cpf):
-            print("Usuario Já Cadastrado com esse CPF".center(80))
+    else:
+        for usuario in usuarios_cadastrados:
+            if (usuario['cpf'] == cpf):
+                print("Usuario Já Cadastrado com esse CPF".center(80))
+                return 
+        
+        nome = input("Digite seu nome: ")
+        data_nascimento = input("Digite a sua data de nascimento EX: XX/XX/XXXX: ")
+        lista_data = data_nascimento.split("/")
+        if len(lista_data) == 3:
+            verificar_dia = (len(lista_data[0]) > 2 and not lista_data[0].isnumeric())
+            verificar_mes = (len(lista_data[1]) > 2 and not lista_data[1].isnumeric())
+            verificar_ano = (len(lista_data[2]) > 4 and not lista_data[2].isnumeric())
+            if verificar_dia or verificar_mes or verificar_ano:
+                print("os valores da Data estão incorreto")
+                return 
+        else:    
+            print("Data de nascimento invalida")
             return 
+    
+    
         
     endereco = input("Digite seu endereco ex: \nlogadouro - numero - bairro - cidade - estado \n => ")
     
     endereco_lista = endereco.split("-")
     cond1 = len(endereco_lista ) < 5 or len(endereco_lista) > 5
-    cond2 =  not endereco_lista[1].strip().isdigit()
 
-    if(cond1 or cond2):
+    if(cond1):
         print("Endereco invalido".center(80))
     else: 
         endereco = f"{endereco_lista[0].strip()}, {endereco_lista[1].strip()} - {endereco_lista[2].strip()} - {endereco_lista[3].strip()} - {endereco_lista[4].strip()}"
@@ -147,10 +150,7 @@ Bem-Vindo {usuario['nome']}
     opcao_user = input(menu_user)
 
     if opcao_user == "1":
-        if not contas_cadastradas:
-            numero = 1
-        else:
-            numero = len(contas_cadastradas)+1
+        numero = len(contas_cadastradas)+1
         
         cadastrar_conta(contas_cadastradas,usuario,numero)
         menu_usuario(usuario)

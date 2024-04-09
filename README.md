@@ -69,6 +69,16 @@ cada conta também possui seu próprio saldo, e seu proprio extrato.
  - **Criar conta corrente** <br>
     O programa deve armazenar contas em uma lista, uma conta é composto por: `agência, número da conta e usuário. O número da conta é sequencial, inciando em 1`. O numero da agência e fixo: "0001". O usuário pode ter mais de uma conta, mas uma conta pertecne a somete um usuário.
 
+   
+## Desafio 3
+
+Iniciar a modelagem do sistema bancario em POO. Adicionar classes para cliente e as operações bancárias: depósito e saque.
+Atualizar a implementação do sistema bancário, para armazenar os dados de clientes e contas bancárias em objetos
+ao invés de dicionários. O código deve seguir o modelo de classes UML a seguir:
+
+![Diagrama UML do sistema bancario](assets/Diagrama_UML_sistema_bancario.png)
+
+
 ## 🔗 Referências
  - [Respositorio Trilha Python DIO](https://github.com/digitalinnovationone/trilha-python-dio)
 
