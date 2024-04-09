@@ -84,3 +84,4 @@ ao invés de dicionários. O código deve seguir o modelo de classes UML a segui
 
  - [Desafio 1 finalizado na Trilha Python](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py)
 - [Desafio 2 finalizado na Trilha Python](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/desafio.py)
+ - [Desafio 3 finalizado na Trilha Python](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/02%20-%20Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos/10%20-%20desafio/desafio_v2.py)
