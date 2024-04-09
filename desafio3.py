@@ -66,6 +66,7 @@ class Conta:
         self._agencia = "0001"
         self._cliente = cliente
         self._historico = Historico()
+
     def menu_conta(self):
         menu_conta = """
 
@@ -106,9 +107,9 @@ class Conta:
             print(" Extrato ".center(80,"-"))
             if self.historico.transacoes:
                 for indice, transacao in enumerate(self.historico.transacoes):
-                    print(f"{indice}:", ", ".join([(f"{chave}={valor}" for chave,valor in transacao.items())]))
+                    print(f"{indice}: {", ".join([f"{chave}={valor}" for chave,valor in transacao.items()])}")
                 
-                print(f"\nSaldo da conta: {self.saldo}")
+                print(f"\nSaldo da conta: {self.saldo:.2f}")
             else:
                 print("\nNenhuma transação foi efetuada nesta conta".center(80))
             
@@ -190,11 +191,11 @@ class ContaCorrente(Conta):
     def sacar(self, valor):
         numero_saques = len(
             [transacao for transacao in self.historico.transacoes 
-             if transacao['tipo'] == Saque.__class__.__name__]
+             if transacao['tipo'] == Saque.__name__]
             )
         
         excedeu_limite = valor > self.limite
-        excedeu_saque = numero_saques > self.limite_saques
+        excedeu_saque = numero_saques == self.limite_saques
 
         if excedeu_limite:
             print("\n operação falhou! valor de saque excede o limite".center(80))
@@ -284,26 +285,31 @@ Bem-Vindo {self.nome}
                     # print(f"{index} \t| Numero: {conta.numero} Agencia: {conta.agencia}")
                     print(f"{index} \t {conta}")
                 
-                self.menu_usuario(lista_contas)
             else:
                 print("Nenhuma conta neste usuario".center(80))
-                self.menu_usuario(lista_contas)
+
+            self.menu_usuario(lista_contas)
 
         elif opcao_user == "3":
-            numero_conta =input("Digite o numero da conta para acessa-la: ")
+            if lista_contas:
+                numero_conta =input("Digite o numero da conta para acessa-la: ")
 
-            if numero_conta.isdigit():
-                for conta in self.contas:
-                    if(conta.numero == int(numero_conta)):
-                        print(f"\nConta acessada com número {conta.numero}".center(80))
-                        conta.menu_conta()
-                        self.menu_usuario(lista_contas)
-
-                print("Numero da conta não encontrado".center(80))
-                
+                if numero_conta.isdigit():
+                    for conta in self.contas:
+                        if(conta.numero == int(numero_conta)):
+                            print(f"\nConta acessada com número {conta.numero}".center(80))
+                            conta.menu_conta()
+                            self.menu_usuario(lista_contas)
+                            break
+                    else:
+                        print("Numero da conta não encontrado".center(80))
+                    
+                else:
+                    print("valor invalido".center(80))
             else:
-                print("valor invalido".center(80))
-                self.menu_usuario(lista_contas)
+                print("Sem contas cadastradas".center(80))
+            
+            self.menu_usuario(lista_contas)
 
         elif opcao_user == "4":
             print(" Dados do Usuario ".center(80))
